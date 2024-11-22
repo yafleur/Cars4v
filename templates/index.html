@@ -1,5 +1,27 @@
 {% extends "_master.html" %} 
-
+{% load static %}
 {% block content %}
-    table.table.thead
+
+<table class="table">
+    <thead>
+       <tr>
+        <th>ID</th>
+        <th>Modelo</th>
+        <th>Marca</th>
+        <th>Ano</th>
+        <th></th>
+
+       </tr>
+    </thead>  
+ <tbody> 
+    {% for car in cars %}
+    <tr>
+        <th>{{car.id}}</th>
+        <th>{{car.model}}</th>
+        <th>{{car.brand}}</th>
+        <th>{{car.yaer}}</th>
+    </tr>
+     {% endfor %}
+</tbody>
+</table>
 {% endblock %}
